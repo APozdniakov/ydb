@@ -80,7 +80,7 @@ class TestWatermarksInYdb(StreamingTestBase):
             endpoint=endpoint,
             partition_key=b'1',
         )
-        time.sleep(10)  # leave a bit more time to fire up idle timeout
+        time.sleep(30)  # leave a bit more time to fire up idle timeout
 
         expected = [
             '{"event_time":"1970-01-01T00:00:42Z","ts":[["1970-01-01T00:00:40Z"]]}',
